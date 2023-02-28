@@ -23,84 +23,170 @@ img {
 	max-width: 1200px;
 }
 
-html{
-    font-size: 62.5%;
+html {
+	font-size: 62.5%;
 }
 
-body{
-    padding: 4em;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family: $body-font;
-    font-weight: $font-weight-regular;
-    color: $clr-white;
-    background: $clr-violet url('../images/bg-mobile.svg') no-repeat top;
-    background-size: contain;
+body {
+	padding: 4em;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-family: $body-font;
+	font-weight: $font-weight-regular;
+	color: $clr-white;
+	background: $clr-violet url('../images/bg-mobile.svg') no-repeat top;
+	background-size: contain;
 }
 
-.header{
-    margin-bottom: 4.5em;
-    width: 100%;
-    display: flex;
+.header {
+	margin-bottom: 4.5em;
+	width: 100%;
+	display: flex;
 
-    &__logo{
-        width: 135px;
-    }
+	&__logo {
+		width: 135px;
+	}
 }
 
-.main{
-    .text-container{
-        margin: 5em 0;
-        font-size: 1.2rem;
-        letter-spacing: 1px;
-        text-align: center;
+.main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 
-        .heading{
-            font-family: $headings-font;
-        }
+	.text-container {
+		margin: 5em 0;
+		font-size: 1.2rem;
+		letter-spacing: 1px;
+		text-align: center;
 
-        .info{
-            font-size: 1.6rem;
-            margin: 2em 0 3em;
-        }
+		.heading {
+			font-family: $headings-font;
+		}
 
-        .register-btn{
-            background-color: $clr-white;
-            padding: 1em 5.6em;
-            border-radius: 30px;
-            box-shadow: 1px 1px 5px hsla(0, 0%, 0%, 70%);
-            color: $clr-violet;
-            cursor: pointer;
+		.info {
+			font-size: 1.6rem;
+			margin: 2em 0 3em;
+		}
 
-            &:hover{
-                color: $clr-magenta;
-            }
-        }
-    }
+		.register-btn {
+			background-color: $clr-white;
+			padding: 1em 5.6em;
+			border-radius: 30px;
+			box-shadow: 1px 1px 5px hsla(0, 0%, 0%, 70%);
+			color: $clr-violet;
+			cursor: pointer;
+
+			&:hover {
+				color: $clr-magenta;
+			}
+		}
+	}
 }
 
-.footer{
-    .socials{
-        display: flex;
-        gap: 20px;
+.footer {
+	display: flex;
+	justify-content: center;
+	.socials {
+		display: flex;
+		gap: 2em;
 
-        &__link{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 2em;
-            height: 2em;
-            color: $clr-white;
-            font-size: 1.6rem;
-            border: 1px solid $clr-white;
-            border-radius: 50%;
+		&__link {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 2em;
+			height: 2em;
+			color: $clr-white;
+			font-size: 1.6rem;
+			border: 1px solid $clr-white;
+			border-radius: 50%;
 
-            &:hover{
-                color: $clr-magenta;
-                border-color: $clr-magenta;
-            }
-        }
-    }
+			&:hover {
+				color: $clr-magenta;
+				border-color: $clr-magenta;
+			}
+		}
+	}
+}
+
+@media (min-width: 576px) {
+	.header {
+		&__logo {
+			width: 100%;
+		}
+	}
+
+	.main {
+		.text-container {
+			font-size: 1.6rem;
+		}
+	}
+
+	.footer {
+		.socials {
+			gap: 4em;
+
+			&__link {
+				width: 3em;
+				height: 3em;
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.main {
+		.text-container {
+			font-size: 2rem;
+
+			.info {
+				font-size: 2.2rem;
+			}
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	body {
+		background-image: url('../images/bg-desktop.svg');
+		background-size: cover;
+		align-items: flex-end;
+		justify-content: space-between;
+	}
+
+	.main {
+		flex-direction: row;
+
+		.mockup-img {
+			margin: 8em 0;
+			width: 50%;
+			height: 50%;
+		}
+
+		.text-container {
+			padding: 2em;
+			font-size: 1.6rem;
+			text-align: left;
+			.info {
+				font-size: 1.5rem;
+			}
+			.register-btn {
+				padding: 1em 4.6em;
+			}
+		}
+	}
+	.footer {
+		justify-content: flex-end;
+	}
+}
+
+@media (min-width: 1200px) {
+	.main {
+		.text-container {
+			padding: 0 3em;
+            font-size: 2rem;
+		}
+	}
 }
