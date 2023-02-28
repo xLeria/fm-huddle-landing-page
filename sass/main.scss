@@ -1,0 +1,106 @@
+@use './variables' as *;
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.wrapper {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1200px;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    padding: 4em;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: $body-font;
+    font-weight: $font-weight-regular;
+    color: $clr-white;
+    background: $clr-violet url('../images/bg-mobile.svg') no-repeat top;
+    background-size: contain;
+}
+
+.header{
+    margin-bottom: 4.5em;
+    width: 100%;
+    display: flex;
+
+    &__logo{
+        width: 135px;
+    }
+}
+
+.main{
+    .text-container{
+        margin: 5em 0;
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+        text-align: center;
+
+        .heading{
+            font-family: $headings-font;
+        }
+
+        .info{
+            font-size: 1.6rem;
+            margin: 2em 0 3em;
+        }
+
+        .register-btn{
+            background-color: $clr-white;
+            padding: 1em 5.6em;
+            border-radius: 30px;
+            box-shadow: 1px 1px 5px hsla(0, 0%, 0%, 70%);
+            color: $clr-violet;
+            cursor: pointer;
+
+            &:hover{
+                color: $clr-magenta;
+            }
+        }
+    }
+}
+
+.footer{
+    .socials{
+        display: flex;
+        gap: 20px;
+
+        &__link{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 2em;
+            height: 2em;
+            color: $clr-white;
+            font-size: 1.6rem;
+            border: 1px solid $clr-white;
+            border-radius: 50%;
+
+            &:hover{
+                color: $clr-magenta;
+                border-color: $clr-magenta;
+            }
+        }
+    }
+}
